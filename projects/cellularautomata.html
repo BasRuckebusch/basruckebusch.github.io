@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Formations</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="transitions.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 id="name" data-swup="1">Bas Ruckebusch</h1>
+    </a>
+  </header>
+
+  <main id="swup" class="detail transition-main">
+    <div class="layout">
+      <div class="detail__header">
+        <h1>
+          Cellular Automata
+        </h1>
+        <h2>
+          <a href="https://github.com/BasRuckebusch/CellularAutomata" target=”_blank>Source code</a>
+        </h2>
+      </div>
+      <div class="detail__content">
+        <p class="intro">
+          A simple cave generation system that I made in Unity.
+          <br>
+          <br>
+          It uses cellular automata to generate cave-like structures, allowing for customization through rule
+          adjustments.
+        </p>
+        <p class="buttons">
+          <a href="/projects/index.html" class="button">←  Return to Projects</a>
+        </p>
+        <span><img src="/img/CaveGen.gif"></span>
+        <p>
+          I developed this project in my free time. It's a simple cave generation tool that utilizes cellular automata
+          to generate cave-like structures. Cellular automata involves defining rules for individual cells, with
+          behavior determined based on their neighbors. We apply rules that determine whether a cell lives or dies,
+          depending on the number of neighboring cells. By tweaking these rules and running the process for a few
+          iterations, we can create the basic shape of a cave, which we can build off of for cave generation.
+        </p>
+        <p>
+          If you would like more technical details, <b><a href="https://github.com/BasRuckebusch/CellularAutomata">you
+              can read the readme at the github repository</a></b>. I've been able
+          to
+          use this project in a handful of contexts for the purposes of terrain generation.
+        </p>
+        <span><img src="/img/results.gif"></span>
+      </div>
+    </div>
+  </main>
+
+  <nav>
+    <a href="/projects">
+      <span><img src="/img/projects.png"></span>
+      <span>Projects</span>
+    </a>
+    <a href="/about">
+      <span><img src="/img/about.png"></span>
+      <span>About</span>
+    </a>
+    <a href="/links">
+      <span><img src="/img/links.png"></span>
+      <span>Links</span>
+    </a>
+    <a href="/resume">
+      <span><img src="/img/resume.png"></span>
+      <span>Resume</span>
+    </a>
+  </nav>
+</body>
+
+</html>
