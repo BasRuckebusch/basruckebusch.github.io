@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Detail</title>
+  <title>Formations</title>
   <link rel="stylesheet" href="base.css" />
   <link rel="stylesheet" href="transitions.css" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,11 +24,11 @@
           Formations
         </h1>
         <h2>
-          <a href="https://github.com/BasRuckebusch/Formations">Source code</a>
+          <a href="https://github.com/BasRuckebusch/Formations" target=”_blank>Source code</a>
         </h2>
       </div>
       <div class="detail__content">
-        <p class="intro" style="--index: 0;">
+        <p class="intro">
           This is a project that aims to create unit formations for Real-Time Strategy games in unity. Made as part of
           the gameplay programming course at DAE.
           <br>
@@ -37,15 +37,39 @@
           and then assigning a formation to them. These allow players to organize their forces and position them for
           maximum effectiveness on a virtual battlefield.
         </p>
-        <p class="buttons" style="--index: 1;">
+        <p class="buttons">
           <a href="/projects/index.html" class="button">←  Return to Projects</a>
         </p>
-        <p style="--index: 2;">
-          I have no idea what to put here yet I'm honestly just testing.
+        <span><img src="/img/for.gif"></span>
+        <p>
+          This project was created as part of the gameplay programming course at DAE. The primary focus of this course
+          was to delve into the world of game AI, specifically covering topics like creating agent behaviours and
+          implementing behaviour trees.
         </p>
-        <p style="--index: 3;">
-          so yeag
+        <p>
+          Towards the end of the course, we were tasked with a free project, and I decided to explore unit formations
+          (used in places like real-time strategy (RTS) games.) Essentially, players can select a group of units and
+          arrange them in specific shapes or formations. My approach to implementing this in Unity was to define the
+          mathematical equations for the desired shapes, create a list of target locations for each agent in the
+          formation, and make those agents move towards those points. <b><a
+              href="https://github.com/BasRuckebusch/Formations" target=”_blank>You can find more detailed information
+              in the
+              GitHub repository in the readme file, which provides a better explanation.</a></b>
         </p>
+        <p>
+          Two shapes are implemented, circles and squares, each with unique characteristics and functionality. Users can
+          easily manipulate these formations, moving them around or splitting them. I'm personally pleased with the
+          control scheme, which turned out intuitive and user-friendly.
+        </p>
+        <p>
+          I had just learned how to use singletons at the time of making this project, which is responsible for their
+          overuse in the project. While it still turned out well, I wished I had focused more on composition and design
+          principles to make the codebase more robust and maintainable.
+        </p>
+        <span><video width=75% height="315" controls
+            src="https://user-images.githubusercontent.com/97399311/213542694-291beb36-23a6-4a0c-936d-8a081d564248.mp4"></span>
+        <span><video width=75% height="315" controls
+            src="https://user-images.githubusercontent.com/97399311/213543070-509ad77d-bce0-4641-8a86-f70598949f7d.mp4"></span>
       </div>
     </div>
   </main>
