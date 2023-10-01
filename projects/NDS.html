@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Detail</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="transitions.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 id="name" data-swup="1">Bas Ruckebusch</h1>
+    </a>
+  </header>
+
+  <main id="swup" class="detail transition-main">
+    <div class="layout">
+      <div class="detail__header">
+        <h1>
+          Hieda no Akyuu's Nocturnal Discordant Symposium
+        </h1>
+        <h2>
+          <a href="https://itch.io/jam/touhou-jam-11/rate/2248771">Game link</a>
+        </h2>
+      </div>
+      <div class="detail__content">
+        <p class="intro">
+          Hieda no Akyuu's Nocturnal Discordant Symposium is a game made in 72 hours for the Touhou Fan Game Jam 11.
+          Where it won first place in the concept category and 9th over all.
+          <br>
+          <br>
+          I was the lead (and only) programmer on this project, collaborating with three individuals spanning different
+          parts of the world.
+        </p>
+        <p class="buttons">
+          <a href="/projects/index.html" class="button">←  Return to Projects</a>
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jvogrluFwM8?si=bntjmmuUYEc4dx5q"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <p>
+          This project originated because an American friend of mine asked if I wanted to join their team for a gamejam.
+          We had been discussing the idea of participating in a game jam together for about a year, and finally, I had a
+          week of free time, so I enthusiastically accepted the invitation.
+        </p>
+        <p>
+          Our team consisted of two artists, myself as a programmer, and a sound designer. We decided on having drawing
+          as
+          our central mechanic rather quickly which eventually led to the concept of having the game resemble a
+          Nintendo DS and working with its limitations.
+        </p>
+        <p>
+          Later, the jamtheme ended up being revealed as immortality inspiring us to create a game where two immortals
+          engage in battle while the player must record the patterns of their attacks to "commemorate" their
+          confrontation.
+        </p>
+        <br>
+        <p>
+          With our concept firmly established the first thing I set out to do was figuring out how to register player
+          input through drawing. Which I go further into <a href="/projects/DollarOne.html">here</a>.
+        </p>
+        <p>
+          This experiment proved highly successful providing a solid foundation upon which we could build the rest of
+          the game by hooking
+          into its systems as a base. And by the end of day one we had input recignition, a template saving and loading
+          system that made it straightforward to add additional patterns drawn by different team members to catch more
+          obscure ways of drawing stuff.
+        </p>
+        <p>
+          At the end of day one, I had a much deeper unerstanding of how images and more specifically image manipulation
+          in Unity worked.
+        </p>
+        <span><img src="/img/Coloures.gif"></span>
+        <p>
+          The start of day two was spent trying to implement a dialogue system which I ended up putting by the wayside
+          to focus on finishing the game and which I sadly never got the chance to return to.
+        </p>
+        <p>
+          What I ended up doing next though was quite important for the game to work, the actual patterns players needed
+          to draw. Luckily my new experience with images in Unity gave inspired a clever approach to streamline the
+          process. Instead of manually coding each pattern, we could use images as templates for bullet spawn locations.
+          This allowed us to use image editors to effortlessly create new bullet patterns. Because of the limited time
+          we had to work on this project this was a great boon.
+        </p>
+        <span><img src="/img/Fight.gif"></span>
+        <p>
+          The rest of day two was spent mostly polishing up this sytem, making sure the correct bullets were recognised
+          and if they were they would be destroyed, adding the art the artists were working on, adding particles and so
+          on and so forth. Until eventually by the end of day two we had a working main mechanic!
+        </p>
+        <span><video width="560" height="315" controls src="/img/Day2.mp4"></span>
+        <br>
+        <p>
+          Day 3 was spent on adding additional mechanics and adding all of the art and music the rest of the team had
+          been working on.
+        </p>
+        <p>
+          Mechanics wise I added everything from a health system that linked into the game speed changing depending on
+          how long you could go without getting hit, the music changing the longer one kept going. A bomb system which
+          allowed you to clear the screen a limited amount of times if stuff got overwhelming. And making it so you
+          could circle things on the menu to select them which was surprisingly hard to figure out.
+        </p>
+        <p>
+          All of this culminated in the eventual jam version of the game.
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QJTIBsJ45fQ"
+          title="Hieda no Akyuu&#39;s Nocturnal Discordant Symposium Gameplay" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <p>
+          Overall I am still quite happy with this version of the game, especially cosidering it was made in a very
+          short timeframe. One thing you might notice is that this is not the same version of the game which is online
+          now, that's because I went back a week later to add some frequently requested features like score and to
+          overhaul the overall balance of the game.
+        </p>
+        <p>
+          In doing this I also found a reason to finally experiment with something, adding WiiMote support. Now, this
+          wasn't exactly something anyone wanted but for me this was a great opportunity to finally dig my teeth into
+          it. I ended up using an <a href="https://github.com/Flafla2/Unity-Wiimote">API from 2015</a> to do so. Both
+          figuring out how to connect a WiiMote to a pc in 2023 and learning how to then use the API correctly took some
+          time and effort but I couldn't be happier with the results!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <nav>
+    <a href="/projects">
+      <span><img src="/img/projects.png"></span>
+      <span>Projects</span>
+    </a>
+    <a href="/about">
+      <span><img src="/img/about.png"></span>
+      <span>About</span>
+    </a>
+    <a href="/links">
+      <span><img src="/img/links.png"></span>
+      <span>Links</span>
+    </a>
+    <a href="/resume">
+      <span><img src="/img/resume.png"></span>
+      <span>Resume</span>
+    </a>
+  </nav>
+</body>
+
+</html>
