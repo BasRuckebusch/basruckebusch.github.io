@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Work in progress</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="transitions.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <h1 id="name" data-swup="1">Bas Ruckebusch</h1>
+    </a>
+  </header>
+
+  <main id="swup" class="detail transition-main">
+    <div class="layout">
+      <div class="detail__header">
+        <h1>
+          Work in progress
+        </h1>
+      </div>
+      <div class="detail__content">
+        <p class="intro">
+          These are all the projects I'm currently involved in or working on, in no particular order. As such these
+          won't have full articles deticated to them yet.
+          <br>
+          <br>Feel free to ask me about them!
+        </p>
+        <p class="buttons">
+          <a href="/projects/index.html" class="button">←  Return to Projects</a>
+        </p>
+        <h2>
+          Automation Roguelike
+        </h2>
+        <span><video width=75% height="315" controls src="/img/AR.mp4"></span>
+        <p>
+          A bigger game I'm currently working on for the group projects course at DAE. Usually this course is focused
+          around working for a client but a few of the projects are student ones. This means me, another programmer and
+          3 artists are helping out a indie game production student with a game. We intend to release it on steam in
+          2024.
+        </p>
+        <p>
+          Most of my efforts have been going into the terrain generation, a robust combination of chunks using cellular
+          automata and a custom system of connecting those chunks with mining areas and giving the player choices
+          between them. The chunk inside of the chunk consists of 3 major layers, caverns, the main layer and pilars.
+          Caverns and pillars are generated as 2 big repeating cellular automata maps allowing them to travel between
+          chunks. The main layer is a smaller bit of cave generation with borders surrounding it so it doesn't clip into
+          other chunks.
+        </p>
+        <span><img src="/img/Caves.gif"></span>
+        <p>
+          The placement works by having a starting chunks all the other chunks connect up to in the form of branches.
+          The first chunk of a branch is always just one but afterwards the player gets a choice of two each time, both
+          of which have a granteed finished path as long as the branch lenght. When the player picks a chunk it's branch
+          becomes the main branch and the other gets deleted, then a new potential branch gets generated when the player
+          is given a choice again.
+        </p>
+        <span><img src="/img/Choices.gif"></span>
+        <p>
+          When a branch if completed it solidifies merging all the meshes in each chunk to make it a lot more performant
+          even when there's hundereds of them in play. The last chunk fo a branch gets counted as "exhausted" meaning it
+          can never be used as a starting chunk, this is due to it having a permanent nest which would hidner mining.
+          Whenever a starting chunk is can't generate any new chunks next to it it becomes echausted as well and the
+          closest non exhausted chunk becomes the starting chunk and gets unsolidified. This system allows for a
+          spiderweb like structure to the caves with a path to the center for the enemies to follow always being
+          possible.
+        </p>
+        <span><img src="/img/web.png"></span>
+        <h2>
+          NDS Port
+        </h2>
+        <span><img src="/img/NDSreal.jpg"></span>
+        <p>
+          Still in it's very early stages, I'm working on porting NDS to an actual Nintendo DS using devkitARM.
+        </p>
+        <h2>
+          Point and click immersive sim
+        </h2>
+        <p>
+          One of my personal projects, an immersive sim based on the control scheme I made for Botanica but ported over
+          to Unity instead.
+        </p>
+        <h2>
+          Space RTS
+        </h2>
+        <p>
+          A 3D RTS using sparse voxel octrees and an improved version of my formation system to make a spaceship RTS,
+          developent is slow due to DAE but I very much want to finish this one day.
+        </p>
+
+      </div>
+    </div>
+  </main>
+
+  <nav>
+    <a href="/projects">
+      <span><img src="/img/projects.png"></span>
+      <span>Projects</span>
+    </a>
+    <a href="/about">
+      <span><img src="/img/about.png"></span>
+      <span>About</span>
+    </a>
+    <a href="/links">
+      <span><img src="/img/links.png"></span>
+      <span>Links</span>
+    </a>
+    <a href="/resume">
+      <span><img src="/img/resume.png"></span>
+      <span>Resume</span>
+    </a>
+  </nav>
+</body>
+
+</html>
