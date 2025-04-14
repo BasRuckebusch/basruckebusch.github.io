@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="transitions.css" />
-  <style>
-  </style>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
-
-<body id="home">
-  <header>
-    <a href="/">
-      <h1 id="name" data-swup="1">Bas Ruckebusch</h1>
-    </a>
-  </header>
-
-  <main id="swup" class="overview transition-main">
-  </main>
-
-  <nav>
-    <a href="/projects">
-      <span><img src="/img/projects.png"></span>
-      <span>Projects</span>
-    </a>
-    <a href="/about">
-      <span><img src="/img/about.png"></span>
-      <span>About</span>
-    </a>
-    <a href="/links">
-      <span><img src="/img/links.png"></span>
-      <span>Links</span>
-    </a>
-    <a href="/resume">
-      <span><img src="/img/resume.png"></span>
-      <span>Resume</span>
-    </a>
-  </nav>
-  <script type="module" src="swup.js"></script>
+<body>
+  <div id="header"></div>
+  <br>
+  <div id="navigation"></div>
+  <div id="flex" >
+    <main>
+      <video id="flex" src="assets/BasRuckebuschReel.mp4" controls></video>
+      <h1>Bas Ruckebusch | <a href="mailto:bas.ruckebusch@gmail.com">bas.ruckebusch@gmail.com</a></h1>
+      <p>I'm Bas and this is my portfolio site. You'll mainly find the projects I've worked on over the years here as well as some information on all of them. I am a game developer with a wide variety of skills and interests.</p>
+    </main>
+  </div>
 </body>
-
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
+<script>
+    fetch('navigation.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navigation').innerHTML = data;
+      });
+</script>
 </html>
