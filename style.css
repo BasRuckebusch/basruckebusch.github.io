@@ -50,6 +50,15 @@ video {
     max-width: 100%;
 }
 
+a {
+    color: #fcb932;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffdd57; /* A brighter shade for hover effect */
+}
+
 /* Header and Navigation */
 #navigation {
     display: block;
